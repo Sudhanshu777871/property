@@ -1,0 +1,190 @@
+/* importing css google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+footer {
+    background-color: rgb(2, 2, 49);
+    color: white;
+    padding: 7px;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin-top: 60px;
+}
+.topContainer{
+    padding: 7px;
+    background-color: orangered;
+}
+.imageSectionArea{
+padding: 5px 0px;
+box-shadow: 3px 5px 10px grey;
+}
+.offerBannerStyling{
+    height: 300px;
+    object-fit: contain;
+}
+.styleAllTextOfDetails{
+    margin-left: 40px;
+    font-size: 18px;
+}
+.myBoldText{
+    font-weight: bold;
+    color:grey;
+}
+#priceStyleOfcopy{
+    color: orangered;
+    font-size: 25px;
+    font-weight: bold;
+}
+.myCartButton{
+    width:60%;
+    margin-left: 20%;
+}
+#numberOfItem{
+    float: left;
+    border-radius: 5px;
+}
+.btn-danger{
+    width: 100%;
+    padding:8px;
+}
+
+.responsiveKeyWordText{
+    margin-left: 40px;
+}
+.similarNotebookConatiner{
+    margin-top: 30px;
+}
+.marginTocol{
+    margin-bottom: 20px;
+}
+.marginTocol:hover{
+    box-shadow: 3px 4px 5px rgb(203, 201, 201);
+}
+.card{
+    border: none;
+}
+
+.copySetSize {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+}
+.copyTitleTextSizeSet {
+    font-size: 16px;
+    color: black;
+    
+}
+.copyPriceStyle{
+    font-size: 20px;
+    color: orangered;
+    font-weight: bolder;
+}
+.simliarProductsBtn{
+    width: 100%;
+}
+#simliarNotebooksResposnive{
+    margin-bottom: 22px;
+}
+
+/* code for styling the scrollbar */
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+/* code for responsive navbar */
+.showHideResponsiveNavbar {
+    display: none;
+}
+.tab {
+    display: flex;
+    width: 400px;
+    height: 70px;
+    align-items: stretch;
+    justify-content: space-around;
+    background-color: grey;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.mobileClassBtnSell {
+    padding: 6px;
+    text-align: center;
+    width: 100%;
+    margin-left: 10%;
+    border-bottom: 3px solid rgb(0, 251, 255);
+    border-right: 3px solid rgb(0, 251, 255);
+    border-top: 3px solid rgb(18, 151, 234);
+    border-left: 3px solid rgb(18, 153, 236);
+    background-color: rgb(31, 106, 4);
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+}
+
+.mobileClassBtnBuy {
+    padding: 6px;
+    text-align: center;
+    width: 90%;
+    margin-right: 5%;
+    border-bottom: 3px solid rgb(0, 251, 255);
+    border-left: 3px solid rgb(0, 251, 255);
+    border-top: 3px solid rgb(18, 151, 234);
+    border-right: 3px solid rgb(18, 153, 236);
+    background-color: rgb(31, 106, 4);
+    border-radius: 30px;
+    color: white;
+    font-weight: bolder;
+
+}
+.userMobileResponsive {
+    font-size:15px;
+    margin-top: 0px;
+    color: white;
+    background-color: black;
+    padding:10px;
+    border-radius: 100%;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+#contact{
+    color: green;
+}
+/* code for media query / responsive */
+@media (max-width: 980px) {
+    .myCartButton{
+ width: 60% !important;
+    }
+}

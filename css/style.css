@@ -1,0 +1,836 @@
+/* importing css google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    box-sizing: border-box;
+    font-family: 'Mukta', sans-serif;
+}
+
+nav {
+    background: #00040b;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    height: 61px;
+    padding: 0 100px;
+}
+
+#carouselExampleCaptions {
+    border-bottom: 1px solid white;
+}
+
+
+
+#account {
+    background-color: rgb(57, 56, 56);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.fa-user {
+    margin-top: 10px;
+}
+
+nav .logo {
+    color: #fff;
+    font-size: 30px;
+    font-weight: 600;
+    letter-spacing: -1px;
+}
+
+nav .nav-items {
+    display: flex;
+    flex: 1;
+    padding: 2px 0 4px 42px;
+}
+
+nav .nav-items li {
+    list-style: none;
+    padding: 1px 20px;
+}
+
+nav .nav-items li a {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+.contact{
+    border:2px solid rgb(48,169,4);
+    padding: 5px 8px;
+    border-radius: 10px;
+}
+.contact:hover{
+    background-color: rgb(48,169,4);
+}
+nav form {
+    margin-left: 60px;
+    display: flex;
+    height: 40px;
+    padding: 2px;
+    background: #1e232b;
+    min-width: 60% !important;
+    border-radius: 2px;
+    border: 1px solid rgba(155, 155, 155, 0.2);
+}
+
+nav form .search-data {
+    width: 100%;
+    height: 100%;
+    padding: 0 10px;
+    color: #fff;
+    font-size: 17px;
+    border: none;
+    font-weight: 500;
+    background: none;
+}
+
+nav form button {
+    padding: 0 15px;
+    color: #fff;
+    font-size: 17px;
+    background: rgb(48, 169, 4);
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+nav form button:hover {
+    background: #e63600;
+}
+
+nav .menu-icon,
+nav .cancel-icon,
+nav .search-icon {
+    width: 40px;
+    text-align: center;
+    margin: 0 50px;
+    font-size: 18px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+
+nav .menu-icon span,
+nav .cancel-icon,
+nav .search-icon {
+    display: none;
+}
+
+@media (max-width: 1245px) {
+    nav {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 1140px) {
+    nav {
+        padding: 0px;
+    }
+
+    nav .logo {
+        flex: 2;
+        text-align: center;
+    }
+
+    nav .nav-items {
+        position: fixed;
+        z-index: 99;
+        top: 70px;
+        width: 100%;
+        left: -100%;
+        height: 100%;
+        padding: 10px 50px 0 50px;
+        text-align: center;
+        background: #14181f;
+        display: inline-block;
+        transition: left 0.3s ease;
+    }
+
+    nav .nav-items.active {
+        left: 0px;
+    }
+
+    nav .nav-items li {
+        line-height: 40px;
+        margin: 30px 0;
+    }
+
+    nav .nav-items li a {
+        font-size: 20px;
+    }
+
+    nav form {
+        position: absolute;
+        top: 80px;
+        right: 50px;
+        opacity: 0;
+        pointer-events: none;
+        transition: top 0.3s ease, opacity 0.1s ease;
+    }
+
+    nav form.active {
+        top: 95px;
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    nav form:before {
+        position: absolute;
+        content: "";
+        top: -13px;
+        right: 0px;
+        width: 0;
+        height: 0;
+        z-index: -1;
+        border: 10px solid transparent;
+        border-bottom-color: #1e232b;
+        margin: -20px 0 0;
+    }
+
+    nav form:after {
+        position: absolute;
+        content: '';
+        height: 60px;
+        padding: 2px;
+        background: #1e232b;
+        border-radius: 2px;
+        min-width: calc(100% + 20px);
+        z-index: -2;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    nav .menu-icon {
+        display: block;
+    }
+
+    nav .search-icon,
+    nav .menu-icon span {
+        display: block;
+    }
+
+    nav .menu-icon span.hide,
+    nav .search-icon.hide {
+        display: none;
+    }
+
+    nav .cancel-icon.show {
+        display: block;
+    }
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+}
+
+.content header {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.content .text {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.space {
+    margin: 10px 0;
+}
+
+nav .logo.space {
+    color: red;
+    padding: 0 5px 0 0;
+}
+
+#allpustakLogo {
+    height: 52px;
+    width: 81px;
+    object-fit: cover;
+    border-radius: 9px;
+    border: 1px solid white;
+    background-color: white;
+}
+
+/* code for dropdown */
+.dropbtn {
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgb(23, 28, 36);
+    border: 1px solid orangered;
+    min-width: 150px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 3;
+}
+
+.dropdown-content a {
+    color: orangered;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.borderWhite {
+    border-bottom: 1px solid white;
+    border-width: 50%;
+
+}
+
+.dropdown-content :hover {
+    border: none
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+    color: black;
+    border: 1px solid black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+#exampleModalLabel{
+    color: green;
+}
+
+/* code for carousle */
+.heroCaroulsImages {
+    height: 600px;
+    object-fit: cover;
+    max-width: 100%;
+    background-position: 50% 50%;
+
+}
+
+/* code for main div */
+.mainDiv {
+    margin-top: 2px;
+}
+
+/* code for latest books heading */
+.latestBooksHeading {
+    margin-top:40px;
+    color: white;
+    font-family: system-ui;
+    border-bottom: 4px solid white;
+    width: fit-content;
+    padding: 5px 49px;
+    margin-left: 37%;
+    border-radius: 14px;
+}
+
+
+
+
+
+/* css for social media */
+.faPadding {
+    padding: 7px;
+    font-size: 20px;
+    width: 36px;
+    text-align: center;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+.faPadding:hover {
+    opacity: 0.7;
+    text-decoration: none;
+    color: white;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+}
+
+@media (max-width: 980px) {
+
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon {
+        margin: 0 20px;
+    }
+
+    nav form {
+        right: 30px;
+    }
+}
+
+@media (max-width: 350px) {
+
+    nav .menu-icon,
+    nav .cancel-icon,
+    nav .search-icon {
+        margin: 0 10px;
+        font-size: 16px;
+    }
+}
+
+/* code for footer */
+.footerCOntainer {
+    background-color: rgb(15, 15, 15);
+    color: white;
+    padding-top: 30px;
+    margin-top: 100px;
+    padding-bottom: 20px;
+}
+
+.marginContent {
+    margin-left: 60px;
+}
+
+#footerUl {
+    list-style-type: none;
+}
+
+/* code for background color  */
+body {
+    background-image: linear-gradient(black, rgb(53, 15, 2));
+}
+
+/* code for latest books images */
+.imgLatestBooks {
+    height: 600px;
+}
+
+/* code for card */
+.bookImageSetHeight {
+    height: 200px;
+    object-fit: contain;
+    padding-top: 10px;
+}
+
+.cardSetSize {
+    max-width: 90%;
+    background-color: rgb(35, 21, 21);
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px grey;
+    color: white;
+}
+
+.setcCardBtnWidth {
+    width: 100%;
+    color: white;
+}
+
+
+
+/* code for media query */
+@media (max-width: 980px) {
+    .heroCaroulsImages {
+        height:250px;
+        object-fit: revert;
+    }
+
+    .cardSetSize {
+        max-width: 80%;
+        margin-left: 10%;
+    }
+
+    .marginContent {
+        margin-left: 5px;
+    }
+
+    .footerCOntainer {
+        padding-top: 20px;
+        margin-top: 100px;
+        padding-bottom: 30px;
+    }
+
+}
+
+/* code for three icon */
+.threeArrow {
+    font-size: 17px;
+    margin-top: 99px;
+    position: absolute;
+    margin-left: 17px;
+    color: orangered;
+    cursor: pointer;
+    border: 2px solid orangered;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.threeArrowHide {
+    font-size: 17px;
+    margin-top: 35%;
+    position: absolute;
+    margin-left: 3px;
+    color: orangered;
+    cursor: pointer;
+    border: 2px solid orangered;
+    padding: 10px;
+    border-radius: 100%;
+}
+
+.textMarginRight {
+    margin-left: 52px;
+    padding: 15px 0px;
+    overflow: auto;
+    height: 100%;
+}
+
+.threeArrow:hover {
+    background-color: orangered;
+    color: white;
+}
+
+.threeArrowHide:hover {
+    background-color: orangered;
+    color: white;
+}
+
+/* code for mobile responsive navbar */
+.showHideResponsiveNavbar {
+    display: none;
+}
+
+.tab {
+    display: flex;
+    width: 400px;
+    height: 70px;
+    align-items: stretch;
+    justify-content: space-around;
+    background-color: grey;
+    width: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position: fixed;
+    z-index: 100;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.button:first-child {
+    border-bottom-left-radius: 15px;
+}
+
+.button:last-child {
+    border-bottom-right-radius: 15px;
+}
+
+/* css code for book description */
+.bookDescription {
+    width: 83%;
+    height: 100%;
+    position: absolute;
+    background-color: white;
+    z-index: 120;
+    border-radius: 3px;
+    display: none;
+}
+
+/* code for footer */
+footer {
+    background-color: rgb(2, 2, 49);
+    color: white;
+    padding: 7px;
+    text-align: center;
+    position: relative;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+/* code for mobile navbar btn */
+@media (max-width: 980px) {
+
+    .mobileClassBtnSell {
+        padding: 6px;
+        text-align: center;
+        width: 100%;
+        margin-left: 10%;
+        border-bottom: 3px solid rgb(0, 251, 255);
+        border-right: 3px solid rgb(0, 251, 255);
+        border-top: 3px solid rgb(18, 151, 234);
+        border-left: 3px solid rgb(18, 153, 236);
+        background-color: rgb(31, 106, 4);
+        border-radius: 30px;
+        color: white;
+        font-weight: bolder;
+    }
+
+    .mobileClassBtnBuy {
+        padding: 6px;
+        text-align: center;
+        width: 90%;
+        margin-right: 5%;
+        border-bottom: 3px solid rgb(0, 251, 255);
+        border-left: 3px solid rgb(0, 251, 255);
+        border-top: 3px solid rgb(18, 151, 234);
+        border-right: 3px solid rgb(18, 153, 236);
+        background-color: rgb(31, 106, 4);
+        border-radius: 30px;
+        color: white;
+        font-weight: bolder;
+    
+    }
+
+    .fa-plus {
+        font-size: 20px;
+    }
+
+    .userMobileResponsive {
+        font-size:15px;
+        margin-top: 0px;
+        color: white;
+        background-color: black;
+        padding:10px;
+        border-radius: 100%;
+    }
+
+    .showHideResponsiveNavbar {
+        display: block;
+    }
+
+    .footerCOntainer {
+        margin-bottom: 24px;
+        margin-top: 50px;
+    }
+
+    .latestBooksHeading {
+    margin-top: 20px;
+    padding: 0;
+    margin-left: 30%;
+    font-size: 28px;
+    }
+}
+
+/* ////////////  COPYWALE CODE STARTS HERE    */
+.myicon {
+    color: white;
+    background-color: orangered;
+    padding: 7px;
+    border-radius: 16px;
+    font-size: 21px;
+    margin-top: 5px;
+}
+
+.myicon:hover {
+    background-color: rgb(57, 56, 56);
+    color: white;
+}
+
+#shopingItem {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    font-size: 18px;
+    padding: 2px;
+    position: absolute;
+    z-index: 1;
+    margin-top: -6px;
+    margin-left: -6px;
+    height: 28px;
+    border-bottom: 2px solid white;
+}
+
+#myOrder {
+    background-color: rgb(48, 169, 4);
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    font-size: 19px;
+}
+
+#myOrder:hover {
+    opacity: 0.9;
+    background-color: grey;
+}
+
+/* css for main book shown div area  */
+.columnWidthSizeSet {
+    max-width: 100%;
+    background-color: white;
+    height: fit-content;
+    box-shadow: 3px 2px 7px grey;
+    padding: 20px;
+}
+
+/* css code for making style of side scroll bar */
+
+
+/* Style the scrollbar */
+.columnWidthSizeSet::-webkit-scrollbar {
+    width: 5px;
+}
+
+.columnWidthSizeSet::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+.columnWidthSizeSet::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2px;
+}
+
+.columnWidthSizeSet::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+
+#applyFilterHeading {
+    text-align: center;
+    font-size: 25px;
+    margin-top: 7px;
+    border-radius: 5px;
+    font-weight: bolder;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
+
+.textForSecondayFilter {
+    font-size: 19px;
+}
+
+.mainImageSizeOfCopy {
+    height: 300px;
+}
+
+#price {
+    color: red;
+    font-size: 20px;
+}
+
+.copySetSize {
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+}
+
+.copyTitleTextSizeSet {
+
+    font-size: 16px;
+    color: black;
+
+}
+.copyPriceStyle{
+    font-size: 20px;
+    color: orangered;
+    font-weight: bolder;
+}
+.marginTocol{
+    margin-bottom: 20px;
+}
+.marginTocol:hover{
+    cursor:pointer;
+    box-shadow: 3px 4px 5px rgb(203, 201, 201);
+}
+.btn-success{
+    width: 90%;
+    border-radius: 0px;
+}
+.card{
+    border: none;
+}
+.containerOfBanner{
+    border: 2px solid white;
+}
+.bannerImageDesign{
+    max-width: calc(100% - 12px);
+    border-radius: 12px;
+    box-shadow: 0 0 7px rgb(241, 238, 238);
+    background: #fff;
+    width: auto;
+    max-height: none!important;
+    height: auto;
+    margin: 12px 6px;
+    margin-top: 50px;
+}
+.bannerImageDesign:hover{
+    box-shadow: 2px 3px 5px white;
+}
+
+/* style the whole page scrollbar */
+
+::-webkit-scrollbar {
+    width: 2px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: grey;
+    border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #555;
+}
+
+
+.hideFilterInMobile{
+    position: sticky;
+    top: 0;
+}
+.offerBannerStyling{
+    height: 200px;
+}
+.offerBannerStyling:hover{
+    box-shadow: 2px 2pxpx 15px grey;
+}
+/*
+/* CODE FOR MEDIA QUERY */
+
+@media (max-width: 980px) {
+    .hideFilterInMobile{
+        display: none;
+    }
+    .offerBannerStyling{
+        height: 110px;
+        object-fit: contain;
+    }
+}
+
+
